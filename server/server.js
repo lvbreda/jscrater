@@ -94,3 +94,4 @@ Meteor.users.allow({
 Meteor.startup(function(){
 	console.log(Meteor._partials);
 });
+
