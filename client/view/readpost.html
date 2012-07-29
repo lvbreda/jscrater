@@ -1,0 +1,43 @@
+<template name="readpost">
+			
+	<div class="container">
+		{{>header}}
+		<div class="row">
+			<div class="span8">
+				
+				{{#each posts}}
+					<header class="jumbotron subhead" id="overview">
+						<h1><a href="">{{title}}</a></h1>
+						<h3><b>Post by: </b> {{authorfirstname}}  {{authorlastname}}</h3>
+					</header>
+					<div>
+						{{{content}}}
+					</div>
+				
+	
+	
+				{{/each}}
+			</div>
+			<div class="span4 infobox">
+				<p class="">
+					<a href="http://agiledev.be" class="agiledev">
+						
+					</a>
+				</p>
+				<div class="span4 infoagiledev">
+					<h1>Our story</h1>
+<p>Our team consists of 2 driven young men from Belgium working closely with a group of very talented people that share our vision. </p><p>After having done quite a number of web projects on our own or with others we joined forces one given summer to make a small application: Snippet bin. During that and following projects we noticed that our individual strengths complimented each other perfectly. That's when we came to the decision to create Agile Development, AgileDev for short.</p>
+
+<h1>Our vision</h1>
+<p>We want to make a difference, fix the things that bother us the most about the industry today. This is why we agreed on the following mantra: Good service, good design. 
+Only you know your business, and your clients. By creating a meaningful dialogue we can create a beautifull product that shows what you are about.</p>
+					
+				</div>
+				<a href="http://agiledev.be" class="btn btn-warning">Visit us</a>
+			</div>
+		</div>
+		{{>comments}}
+			
+		</div>
+	</div>
+</template>

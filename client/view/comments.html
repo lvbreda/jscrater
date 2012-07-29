@@ -1,0 +1,41 @@
+<template name="comments">
+	<div class="row" id="comments">
+		{{#each comments}}
+			<div class="well span6 offset1">
+				<h2>{{user}}:</h2>
+				<div class="commentcontent">
+					{{content}}
+				</div>
+			</div>
+		{{/each}}
+	</div>
+	<div class="row" id="addcomment">
+		<form class="span8">
+			<hr/>
+			<div class="control-group">
+				<!-- Text input-->
+				<label class="control-label" for="input01">Username</label>
+				<div class="controls">
+					<input type="text"class="input-xlarge" id="username" value="">
+					<p class="help-block"></p>
+				</div>
+			</div>
+			<div class="control-group">
+				<!-- Text input-->
+				<label class="control-label" for="input01">Comment</label>
+				<div class="controls">
+					<textarea class="input-xlarge" id="comment" value="" style="width : 100%; height : 200px;"></textarea>
+					<p class="help-block"></p>
+					<hr/>
+				<button type="submit" class="btn btn-primary" id="submit">
+					Add comment &lt; &lt;
+				</button>
+				</div>
+			</div>
+			<div class="form-actions">
+				
+				
+			</div>
+		</form>
+	</div>
+</template>

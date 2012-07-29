@@ -1,0 +1,83 @@
+<template name="#users">
+	<form>
+		<button class="btn btn-warning" id="newUser">Add user</button>
+	</form>
+	<table class='table table-bordered table-striped'>
+		<thead>
+			<tr>
+				<th>Username</th>
+				<th>Email</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each users}}
+				<tr>
+					<td>{{username}}</td>
+					<td>{{emails}}</td>
+					<td><a class="delete">Delete</a></td>
+				</tr>
+			{{/each}}
+		</tbody>
+		
+	</table>
+</template>
+<template name="#newuser">
+	<form class="form-horizontal" enctype="multipart/form-data">
+		<fieldset>
+			<div id="legend" class="">
+				<legend class="">
+					New user
+				</legend>
+			</div>
+			<div class="control-group">
+				<!-- Text input-->
+				<label class="control-label" for="input01">Username</label>
+				<div class="controls">
+					<input type="text" placeholder="Username"class="input-xlarge" id="username">
+					<p class="help-block"></p>
+				</div>
+			</div>
+			<div class="control-group">
+				<!-- Text input-->
+				<label class="control-label" for="input01">Password</label>
+				<div class="controls">
+					<input type="password" placeholder="Username"class="input-xlarge" id="password">
+					<p class="help-block"></p>
+				</div>
+			</div>
+			<div class="control-group">
+				<!-- Text input-->
+				<label class="control-label" for="input01">E-mail</label>
+				<div class="controls">
+					<input type="text" placeholder="foo@bar.com"class="input-xlarge" id="email">
+					<p class="help-block"></p>
+				</div>
+			</div>
+			<div class="control-group">
+				<!-- Text input-->
+				<label class="control-label" for="input01">Firstname</label>
+				<div class="controls">
+					<input type="text" class="input-xlarge" id="firstname">
+					<p class="help-block"></p>
+				</div>
+			</div>
+			<div class="control-group">
+				<!-- Text input-->
+				<label class="control-label" for="input01">Lastname</label>
+				<div class="controls">
+					<input type="text" class="input-xlarge" id="lastname">
+					<p class="help-block"></p>
+				</div>
+			</div>
+		<div class="form-actions">
+				<button type="submit" class="btn btn-primary" id="submit">
+					Save changes
+				</button>
+				<button class="btn">
+					Cancel
+				</button>
+			</div>
+		</fieldset>
+	</form>
+</template>

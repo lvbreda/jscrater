@@ -1,0 +1,70 @@
+<template name="#posts">
+	<a class="btn btn-warning" href="/admin#post">New post</a>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>Description</th>
+				<th>Date</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each posts}}
+			<tr>
+				<td>{{title}}</td>
+				<td>{{description}}</td>
+				<td>{{date}}</td>
+				<td><a data-id="{{_id}}" class="delete">delete</a><a href="#post/{{_id}}" style="float:right;">edit</a></td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
+</template>
+<template name="#post">
+	
+	
+	<form class="form-horizontal" enctype="multipart/form-data">
+		<fieldset>
+			<div id="legend" class="">
+				<legend class="">
+					Edit/add post
+				</legend>
+			</div>
+			<div class="control-group">
+				<!-- Text input-->
+				<label class="control-label" for="input01">Title</label>
+				<div class="controls">
+					<input type="text"class="input-xlarge" id="title" value="{{post.title}}">
+					<p class="help-block"></p>
+				</div>
+			</div>
+			<div class="control-group">
+				<!-- Text input-->
+				<label class="control-label" for="input01">Content</label>
+				<div class="controls">
+					<textarea class="input-xlarge" id="content" style="width : 100%; height : 400px;">{{post.content}}</textarea>
+					<p class="help-block"></p>
+				</div>
+			</div>
+			<div class="control-group">
+				<!-- Text input-->
+				<label class="control-label" for="input01">Description</label>
+				<div class="controls">
+					<textarea class="input-xlarge" id="description" style="width : 100%; height : 200px;">{{post.description}}</textarea>
+					<p class="help-block"></p>
+				</div>
+			</div>
+			<div class="form-actions">
+				<button type="submit" class="btn btn-primary" id="submit">
+					Save changes
+				</button>
+				<button class="btn">
+					Cancel
+				</button>
+			</div>
+		</fieldset>
+	</form>
+
+
+</template>

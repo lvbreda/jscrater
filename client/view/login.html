@@ -1,0 +1,34 @@
+<template name="login">
+	<div class="container">
+		<div class="span3 offset4 well" ng-controller="LoginCtrl">
+			<form class="form" ng-model="form">
+				<fieldset>
+					<legend>
+						Log-in
+					</legend>
+					<div class="error">
+						{{error}}
+					</div>
+					<div class="div_text">
+						<div class="input-prepend">
+							<span class="add-on"><i class="icon-user" title="Username"></i></span>
+							<input name="log" type="text" id="log" value="" class="username span2" placeholder="Username" ng-model="username">
+						</div>
+					</div>
+					<div class="div_text">
+						<div class="input-prepend">
+							<span class="add-on"><i class="icon-lock" title="Password"></i></span>
+							<input name="pwd" type="password" id="pwd" class="password span2" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;" ng-model="password">
+						</div>
+
+					</div>
+					<div class="button_div">
+						<input name="rememberme" type="checkbox" id="rememberme" value="forever">
+						&nbsp;Remember me&nbsp;&nbsp;
+						<input type="button"  id="login" name="Submit" value="Login" class="btn btn-primary">
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</template>
